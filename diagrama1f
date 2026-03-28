@@ -1,0 +1,149 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Container Diagram">
+    <mxGraphModel dx="1420" dy="827" grid="1" gridSize="10">
+      <root>
+
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- CLIENT -->
+        <mxCell id="client" value="Cliente Bancario" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3b4b63;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- WEB -->
+        <mxCell id="web" value="Web Banking SPA&#10;(React / Angular)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#214d2d;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="220" y="220" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- MOBILE -->
+        <mxCell id="mobile" value="Mobile Banking App&#10;(Flutter / React Native)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#214d2d;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="220" y="360" width="200" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- GATEWAY -->
+        <mxCell id="gateway" value="API Gateway / BFF&#10;Routing, Security, Rate Limiting" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5c3a00;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="470" y="300" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- SERVICES -->
+        <mxCell id="customer" value="Customer Service&#10;Consulta datos cliente" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a2e2e;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="780" y="120" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="account" value="Account Service&#10;Gestión de cuentas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a2e2e;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="780" y="210" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="transaction" value="Transaction Service&#10;Transferencias y pagos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a2e2e;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="780" y="300" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="notification" value="Notification Service&#10;Envía notificaciones" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a2e2e;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="780" y="390" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="onboarding" value="Onboarding Service&#10;Alta digital / biometría" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a2e2e;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="780" y="480" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- EXTERNAL -->
+        <mxCell id="idp" value="OAuth2 / OIDC IdP&#10;Autenticación y MFA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4b3f59;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="120" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="core" value="Core Banking System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4b3f59;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="210" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="custext" value="Customer Detail System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4b3f59;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="300" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="notifext" value="Notification Provider&#10;Email / SMS / Push" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4b3f59;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="390" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="facial" value="Facial Recognition Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4b3f59;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="480" width="220" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- DATABASE -->
+        <mxCell id="redis" value="Redis Cache" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6b3f00;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="820" y="610" width="140" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="pg" value="PostgreSQL DB" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6b3f00;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="990" y="610" width="140" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- EDGES -->
+
+        <mxCell edge="1" source="client" target="web" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="client" target="mobile" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="web" target="gateway" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="mobile" target="gateway" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="gateway" target="customer" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="gateway" target="account" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="gateway" target="transaction" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="gateway" target="notification" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="mobile" target="onboarding" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="gateway" target="idp" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="customer" target="core" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="customer" target="custext" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="account" target="core" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="transaction" target="core" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="notification" target="notifext" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell edge="1" source="onboarding" target="facial" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,275 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3.1 Safari/605.1.15" version="29.6.6">
+  <diagram name="C4 Component Diagram" id="0">
+    <mxGraphModel dx="1775" dy="1209" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-2" edge="1" parent="1" source="gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="authFacade">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="430" />
+              <mxPoint x="410" y="135" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-3" edge="1" parent="1" source="gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="customerApi">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="410" />
+              <mxPoint x="370" y="295" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-5" edge="1" parent="1" source="gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="transactionApi">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="395" y="450" />
+              <mxPoint x="395" y="585" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-6" edge="1" parent="1" source="gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="onboardingApi">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="470" />
+              <mxPoint x="340" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-7" edge="1" parent="1" source="gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="accountApi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d8bd82;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="API Gateway / BFF&#xa;Routing, Security, Token Validation" vertex="1">
+          <mxGeometry height="100" width="260" x="60" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="platform" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;fontStyle=1;" value="Plataforma BP de banca digital - Backend Components" vertex="1">
+          <mxGeometry height="900" width="1320" x="390" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-8" edge="1" parent="1" source="authFacade" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="sessionPolicy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-9" edge="1" parent="1" source="authFacade" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="idp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="70" />
+              <mxPoint x="1510" y="70" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="authFacade" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7b9b9;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Auth Facade&#xa;OAuth2 / OIDC integration&#xa;Token exchange / claims" vertex="1">
+          <mxGeometry height="90" width="240" x="470" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sessionPolicy" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e7b9b9;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Security Policy Component&#xa;MFA / scopes / authorization rules" vertex="1">
+          <mxGeometry height="90" width="260" x="760" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-10" edge="1" parent="1" source="customerApi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="customerAggregator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="customerApi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b8d6bf;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Customer API Component&#xa;Customer profile queries" vertex="1">
+          <mxGeometry height="90" width="240" x="470" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-11" edge="1" parent="1" source="customerAggregator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="core">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="370" />
+              <mxPoint x="1205" y="370" />
+              <mxPoint x="1205" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-12" edge="1" parent="1" source="customerAggregator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="customerDetail">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="350" />
+              <mxPoint x="1510" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-13" edge="1" parent="1" source="customerAggregator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="cacheComponent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="customerAggregator" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b8d6bf;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Customer Aggregator&#xa;Merge core + detailed customer data" vertex="1">
+          <mxGeometry height="90" width="260" x="760" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-14" edge="1" parent="1" source="cacheComponent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="redis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cacheComponent" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b8d6bf;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Customer Cache Component&#xa;Cache-aside pattern" vertex="1">
+          <mxGeometry height="90" width="240" x="1080" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-15" edge="1" parent="1" source="accountApi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="accountAdapter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="accountApi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b8d6bf;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Account API Component&#xa;Balance / accounts / products" vertex="1">
+          <mxGeometry height="90" width="240" x="470" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-18" edge="1" parent="1" source="accountAdapter" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="core">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1510" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="accountAdapter" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b8d6bf;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Account Adapter&#xa;Core banking account integration" vertex="1">
+          <mxGeometry height="90" width="260" x="760" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-19" edge="1" parent="1" source="transactionApi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="fraudValidator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="transactionApi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8e8;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Transaction API Component&#xa;Transfers / payments" vertex="1">
+          <mxGeometry height="90" width="240" x="470" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-20" edge="1" parent="1" source="fraudValidator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="transferOrchestrator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fraudValidator" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8e8;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Fraud / Risk Validator&#xa;Limits / rules / validations" vertex="1">
+          <mxGeometry height="90" width="260" x="760" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-21" edge="1" parent="1" source="transferOrchestrator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="core">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-22" edge="1" parent="1" source="transferOrchestrator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="postgres">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1360" y="610" />
+              <mxPoint x="1360" y="865" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-23" edge="1" parent="1" source="transferOrchestrator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="eventBus">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1190" y="660" />
+              <mxPoint x="1060" y="660" />
+              <mxPoint x="1060" y="865" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="transferOrchestrator" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8e8;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Transfer Orchestrator&#xa;Saga / compensation / sequencing" vertex="1">
+          <mxGeometry height="90" width="260" x="1080" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-24" edge="1" parent="1" source="onboardingApi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="biometricWorkflow">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="onboardingApi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d2cadf;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Onboarding API Component&#xa;Digital enrollment" vertex="1">
+          <mxGeometry height="90" width="240" x="470" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-25" edge="1" parent="1" source="biometricWorkflow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" target="facial">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="680" />
+              <mxPoint x="1510" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-26" edge="1" parent="1" source="biometricWorkflow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="idp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="810" />
+              <mxPoint x="1650" y="810" />
+              <mxPoint x="1650" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-27" edge="1" parent="1" source="biometricWorkflow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="postgres">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="920" />
+              <mxPoint x="1510" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="biometricWorkflow" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d2cadf;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Biometric Workflow Component&#xa;Face match / liveness / identity validation" vertex="1">
+          <mxGeometry height="90" width="260" x="760" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-31" edge="1" parent="1" source="notificationComposer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" target="notificationProvider">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1380" y="730" />
+              <mxPoint x="1380" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-32" edge="1" parent="1" source="notificationComposer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="postgres">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1370" y="770" />
+              <mxPoint x="1370" y="897" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="notificationComposer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4cccc;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Notification Composer&#xa;Build SMS / email / push payloads" vertex="1">
+          <mxGeometry height="90" width="260" x="1080" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-33" edge="1" parent="1" source="auditLogger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="postgres">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="auditLogger" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4cccc;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Audit Logger&#xa;Trace actions / compliance / immutable logs" vertex="1">
+          <mxGeometry height="90" width="240" x="1390" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="idp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9d2e9;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="OAuth2 / OIDC IdP" vertex="1">
+          <mxGeometry height="80" width="240" x="1390" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9d2e9;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Core Banking System" vertex="1">
+          <mxGeometry height="80" width="240" x="1390" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="customerDetail" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9d2e9;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Customer Detail System" vertex="1">
+          <mxGeometry height="80" width="240" x="1390" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="facial" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9d2e9;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Facial Recognition Service" vertex="1">
+          <mxGeometry height="80" width="240" x="1390" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="notificationProvider" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9d2e9;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Notification Provider" vertex="1">
+          <mxGeometry height="80" width="240" x="1390" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d8bd82;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Redis Cache" vertex="1">
+          <mxGeometry height="80" width="210" x="1095" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="postgres" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d8bd82;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="PostgreSQL DB" vertex="1">
+          <mxGeometry height="90" width="240" x="1390" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-28" edge="1" parent="1" source="eventBus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="notificationComposer" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-29" edge="1" parent="1" source="eventBus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="notificationComposer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xxtmnERb5hkz0HJBdDIA-30" edge="1" parent="1" source="eventBus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="auditLogger">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1350" y="865" />
+              <mxPoint x="1350" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eventBus" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d8bd82;strokeColor=#ffffff;fontColor=#000000;fontStyle=1;" value="Event Bus&#xa;Kafka / RabbitMQ / SNS-SQS" vertex="1">
+          <mxGeometry height="90" width="240" x="1080" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="authFacade" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=1;fillColor=none;" target="sessionPolicy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="customerApi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fillColor=none;" target="customerAggregator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="cacheComponent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;startArrow=block;startFill=1;endFill=1;strokeWidth=2;fillColor=none;" target="redis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="accountApi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fillColor=none;" target="accountAdapter">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="transactionApi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fillColor=none;" target="fraudValidator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="fraudValidator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeWidth=2;fillColor=none;" target="transferOrchestrator">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e24" edge="1" parent="1" source="eventBus" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;startArrow=none;startFill=0;endFill=1;strokeWidth=2;fillColor=none;" target="notificationComposer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e28" edge="1" parent="1" source="auditLogger" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;startArrow=none;startFill=0;endFill=1;strokeWidth=2;fillColor=none;" target="postgres">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
